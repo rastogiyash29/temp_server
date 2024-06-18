@@ -39,7 +39,7 @@ class ConnectionManager:
         tasks = []
         for i in range(num_responses):
             response_message = f"Server response reqNum->{reqNum}<-  responseNum:{i + 1}"
-            delay = random.uniform(0.5, 2.5)
+            delay = random.uniform(1, 10)
             task = asyncio.create_task(self.send_response(websocket, response_message, delay))
             tasks.append(task)
 
